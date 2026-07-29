@@ -1,0 +1,110 @@
+:root {
+  --swing-gold: #d99a28;
+  --swing-gold-light: #f6c85f;
+  --swing-ink: #1b1712;
+  --swing-red: #8d2f24;
+  --swing-green: #2d695c;
+  --md-primary-fg-color: #17130f;
+  --md-accent-fg-color: #d99a28;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-hue: 32;
+  --md-default-bg-color: #12100e;
+  --md-default-fg-color: #f3ead9;
+  --md-primary-fg-color: #0f0c09;
+  --md-accent-fg-color: #f6c85f;
+}
+
+.md-header,
+.md-tabs {
+  background: linear-gradient(90deg, #17130f 0%, #2d1b13 45%, #111827 100%);
+}
+
+.md-main__inner {
+  margin-top: 1.2rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 280px);
+  gap: clamp(1.5rem, 5vw, 4rem);
+  align-items: center;
+  padding: clamp(2rem, 7vw, 5rem);
+  border: 1px solid color-mix(in srgb, var(--md-default-fg-color) 14%, transparent);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--swing-gold-light) 22%, transparent), transparent 42%),
+    linear-gradient(135deg, color-mix(in srgb, var(--swing-red) 18%, transparent), transparent 62%),
+    color-mix(in srgb, var(--md-default-bg-color) 86%, var(--swing-ink));
+}
+
+.hero h1 {
+  margin: 0 0 .5rem;
+  color: var(--md-default-fg-color);
+  font-size: clamp(2rem, 4.4vw, 4.1rem);
+  line-height: 1.02;
+}
+
+.hero p {
+  max-width: 38rem;
+  color: color-mix(in srgb, var(--md-default-fg-color) 82%, transparent);
+  font-size: 1.05rem;
+}
+
+.hero img {
+  width: min(100%, 260px);
+  justify-self: center;
+  filter: drop-shadow(0 1rem 1.5rem rgb(0 0 0 / 22%));
+}
+
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.quick-card {
+  min-height: 10rem;
+  padding: 1rem;
+  border: 1px solid color-mix(in srgb, var(--md-default-fg-color) 12%, transparent);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--md-default-bg-color) 92%, var(--swing-gold-light));
+}
+
+.quick-card h2 {
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+.set-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.set-list li {
+  padding: .8rem 1rem;
+  border-left: .25rem solid var(--swing-gold);
+  background: color-mix(in srgb, var(--md-default-bg-color) 92%, var(--swing-green));
+}
+
+.gig-table td:first-child,
+.gig-table th:first-child {
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 760px) {
+  .hero,
+  .quick-grid,
+  .set-list {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 1.5rem;
+  }
+}

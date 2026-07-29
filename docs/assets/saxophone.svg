@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Saxophone</title>
+  <desc id="desc">Simple gold saxophone line icon for SwingBig.Band.</desc>
+  <defs>
+    <linearGradient id="bell" x1="45" y1="212" x2="202" y2="55" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f8d46a"/>
+      <stop offset="0.54" stop-color="#d99a28"/>
+      <stop offset="1" stop-color="#8f4d18"/>
+    </linearGradient>
+  </defs>
+  <path fill="#22160c" opacity=".18" d="M62 214c23 19 69 24 103 4 35-20 48-60 34-91-13-29-43-42-72-35-25 6-40 26-36 46 3 15 16 25 32 23 12-1 21-10 22-21 1-9-5-17-14-19-6-1-12 1-16 5-4 5-5 11-3 17 1 4 5 6 9 5 4-1 6-5 5-9 0-2 1-4 3-5 3-1 7 1 8 5 1 5-4 11-11 12-11 2-20-6-21-16-2-13 9-28 28-32 23-5 46 7 56 30 11 25-1 58-30 75-28 16-68 12-87-4-8-6-15-4-19 1-4 6-2 13 5 18z"/>
+  <path fill="none" stroke="url(#bell)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M74 205c30 25 86 26 119-8 25-25 31-63 14-91-18-30-55-42-88-27-24 11-38 35-31 57 6 19 24 31 44 28 16-3 28-15 30-30 2-13-6-25-19-30-10-4-22-1-30 7"/>
+  <path fill="none" stroke="#f6c85f" stroke-linecap="round" stroke-linejoin="round" stroke-width="14" d="M136 113 92 54"/>
+  <path fill="none" stroke="#f6c85f" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" d="M86 48 51 32"/>
+  <path fill="#fff0b8" stroke="#8f4d18" stroke-linecap="round" stroke-linejoin="round" stroke-width="9" d="M45 25c16-8 37-4 50 9l-10 20c-15-13-33-17-50-10z"/>
+  <circle cx="124" cy="143" r="8" fill="#fff0b8" stroke="#8f4d18" stroke-width="5"/>
+  <circle cx="101" cy="112" r="7" fill="#fff0b8" stroke="#8f4d18" stroke-width="5"/>
+  <circle cx="83" cy="84" r="6" fill="#fff0b8" stroke="#8f4d18" stroke-width="5"/>
+  <path fill="#f6c85f" stroke="#8f4d18" stroke-linejoin="round" stroke-width="7" d="M53 201c9-17 35-23 58-13 21 9 37 28 37 48-34 8-75-5-95-35z"/>
+  <path fill="none" stroke="#fff0b8" stroke-linecap="round" stroke-width="8" d="M72 202c16-7 38-3 52 12"/>
+</svg>
