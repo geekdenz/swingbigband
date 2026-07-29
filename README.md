@@ -25,6 +25,17 @@ This repository includes a GitHub Actions workflow at `.github/workflows/pages.y
 3. Set **Build and deployment > Source** to **GitHub Actions**.
 4. Push to the `main` branch, or run the `Deploy GitHub Pages` workflow manually.
 
+## Deploy with the Script
+
+```bash
+cp example.env .env
+$EDITOR .env
+chmod +x scripts/deploy.sh
+./scripts/deploy.sh
+```
+
+Use `DEPLOY_MODE=actions` to push `main` and let GitHub Actions publish Pages, or `DEPLOY_MODE=gh-pages` to publish directly with `mkdocs gh-deploy`. Keep `DRY_RUN=true` until the GitHub remote and `SITE_URL` are filled in.
+
 ## Build Locally
 
 ```bash

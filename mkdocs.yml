@@ -1,5 +1,6 @@
 site_name: SwingBig.Band
 site_description: News, gigs, repertoire, and notes from a swing big band.
+site_url: !ENV [SITE_URL, ""]
 
 theme:
   name: material

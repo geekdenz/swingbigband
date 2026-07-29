@@ -1,5 +1,6 @@
 .venv/
 .deps/
+.env
 site/
 __pycache__/
 .cache/
