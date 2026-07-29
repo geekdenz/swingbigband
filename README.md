@@ -25,6 +25,12 @@ This repository includes a GitHub Actions workflow at `.github/workflows/pages.y
 3. Set **Build and deployment > Source** to **GitHub Actions**.
 4. Push to the `main` branch, or run the `Deploy GitHub Pages` workflow manually.
 
+If you want the workflow to try enabling Pages for a new repository automatically, add a repository secret named `PAGES_TOKEN` with a token that can write Pages settings. Without that secret, GitHub Pages still needs to be enabled once in **Settings > Pages**.
+
+Optional repository variable:
+
+- `SITE_URL`: the final public URL, such as `https://YOUR_USER.github.io/YOUR_REPO/`.
+
 ## Deploy with the Script
 
 ```bash
