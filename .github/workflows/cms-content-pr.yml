@@ -1,0 +1,40 @@
+name: Open CMS content pull request
+
+on:
+  push:
+    branches:
+      - cms-updates
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  open-or-update-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out CMS content branch
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+
+      - name: Check for an existing pull request
+        id: existing
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          number="$(gh pr list --base main --head cms-updates --state open --json number --jq '.[0].number // empty')"
+          echo "number=$number" >> "$GITHUB_OUTPUT"
+
+      - name: Open pull request
+        if: steps.existing.outputs.number == ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh pr create \
+            --base main \
+            --head cms-updates \
+            --title "Publish CMS content updates" \
+            --body "Automated content proposal from the authenticated CMS. Review the rendered changes and validation checks before merging."
+
+      - name: Report existing pull request
+        if: steps.existing.outputs.number != ''
+        run: echo "Updated pull request #${{ steps.existing.outputs.number }}"

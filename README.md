@@ -2,6 +2,11 @@
 
 A MkDocs Material blog site for a jazz big band.
 
+This repository is the **private canonical content repository**. Markdown,
+MkDocs configuration, source assets, and history stay private. A server-side
+publisher builds it and replaces the contents of a separate public repository
+with generated HTML/assets only.
+
 ## Run with Docker Compose
 
 ```bash
@@ -16,20 +21,30 @@ To use a different host port:
 SWINGBIG_PORT=8080 docker compose -f compose.yaml up
 ```
 
-## Deploy to GitHub Pages
+## Private validation
 
-This repository includes a GitHub Actions workflow at `.github/workflows/pages.yml`.
+GitHub Actions strictly builds pushes and pull requests. It does not deploy this
+private source repository to Pages.
 
-1. Push the repository to GitHub.
-2. In GitHub, open **Settings > Pages**.
-3. Set **Build and deployment > Source** to **GitHub Actions**.
-4. Push to the `main` branch, or run the `Deploy GitHub Pages` workflow manually.
+CMS changes are pushed to the private `cms-updates` branch. The
+`cms-content-pr.yml` workflow opens or updates a pull request into protected
+`main`; review and validation happen before publication.
 
-If you want the workflow to try enabling Pages for a new repository automatically, add a repository secret named `PAGES_TOKEN` with a token that can write Pages settings. Without that secret, GitHub Pages still needs to be enabled once in **Settings > Pages**.
+## Public deployment
 
-Optional repository variable:
+The private CMS repository contains the production publisher. After private
+`main` is approved, the server:
 
-- `SITE_URL`: the final public URL, such as `https://YOUR_USER.github.io/YOUR_REPO/`.
+1. clones private `main` into a temporary directory;
+2. runs `mkdocs build --strict`;
+3. clones the public output repository;
+4. deletes its previous generated files;
+5. copies only the generated site, `.nojekyll`, and optional `CNAME`;
+6. pushes public `main` using a one-hour GitHub App installation token.
+
+Configure GitHub Pages in the public output repository to deploy branch `main`,
+folder `/ (root)`. Complete server, GitHub App, security, backup, and recovery
+instructions are in `docs/PRODUCTION_DEPLOYMENT.md` of the private CMS repository.
 
 ## Deploy with the Script
 
@@ -40,7 +55,9 @@ chmod +x scripts/deploy.sh
 ./scripts/deploy.sh
 ```
 
-Use `DEPLOY_MODE=actions` to push `main` and let GitHub Actions publish Pages, or `DEPLOY_MODE=gh-pages` to publish directly with `mkdocs gh-deploy`. Keep `DRY_RUN=true` until the GitHub remote and `SITE_URL` are filled in.
+This script validates and pushes private source `main`. It never writes generated
+output into this repository or directly to Pages. Keep `DRY_RUN=true` until the
+private remote and `SITE_URL` are correct.
 
 ## Build Locally
 
@@ -48,3 +65,20 @@ Use `DEPLOY_MODE=actions` to push `main` and let GitHub Actions publish Pages, o
 python3 -m pip install --target .deps -r requirements.txt
 PYTHONPATH=.deps python3 -m mkdocs build --strict
 ```
+
+## Serve Locally
+
+```bash
+./serve.sh
+```
+
+The script creates or reuses `.deps`, installs changed requirements, and starts
+the live-reloading site at <http://127.0.0.1:8001/>. Override the listener when
+needed:
+
+```bash
+SWINGBIG_SERVE_ADDR=0.0.0.0:8080 ./serve.sh
+```
+
+Set `SWINGBIG_REFRESH_DEPS=true` to force a dependency refresh. Additional
+arguments are passed to `mkdocs serve`.
