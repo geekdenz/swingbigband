@@ -1,6 +1,12 @@
-site_name: SwingBig.Band
-site_description: News, gigs, repertoire, and notes from a swing big band.
+site_name: MJC Big Swing Band
+site_description: Levin RSA Cabaret on Saturday 31 October 2026 at 7:30 pm.
 site_url: !ENV [SITE_URL, ""]
+
+exclude_docs: |
+  about.md
+  gigs.md
+  repertoire.md
+  blog/
 
 theme:
   name: material
@@ -30,15 +36,9 @@ theme:
 
 nav:
   - Home: index.md
-  - Gigs: gigs.md
-  - Repertoire: repertoire.md
-  - About: about.md
-  - Blog:
-      - blog/index.md
 
 plugins:
   - search
-  - blog
 
 markdown_extensions:
   - admonition
@@ -55,12 +55,3 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/extra.css
-
-extra:
-  social:
-    - icon: fontawesome/solid/music
-      link: /repertoire/
-      name: Repertoire
-    - icon: fontawesome/solid/calendar-days
-      link: /gigs/
-      name: Gigs

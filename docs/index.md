@@ -1,54 +1,72 @@
 ---
-title: Home
+title: Levin RSA Cabaret
 hide:
+  - navigation
   - toc
 ---
 
-<section class="hero">
-  <div>
-    <h1>SwingBig.Band</h1>
-    <p>A hard-swinging big band blog for section notes, gig announcements, set lists, and the small moments that happen between the first count-off and the final shout chorus.</p>
-    <p><a class="md-button md-button--primary" href="blog/">Read the blog</a> <a class="md-button" href="gigs/">See upcoming gigs</a></p>
-  </div>
-  <img src="assets/saxophone.svg" alt="Simple saxophone icon">
-</section>
+<section class="event-hero" markdown>
 
-## From the bandstand
+<p class="event-kicker">Levin RSA Cabaret</p>
 
-<div class="quick-grid" markdown>
+# MJC Big Swing Band
 
-<section class="quick-card" markdown>
-## Next call
+<p class="event-date"><time datetime="2026-10-31T19:30">7:30 pm · Saturday 31 October 2026</time></p>
 
-**Friday, August 14**  
-Doors at 7:00 PM, downbeat at 8:00 PM.
+<p class="event-credit">Musical Director <strong>Trevor Castle</strong></p>
 
-[Gig details](gigs.md)
-</section>
-
-<section class="quick-card" markdown>
-## Latest chart
-
-The book just picked up a brighter opener built around brass punches, walking bass, and a sax soli that needs room to breathe.
-
-[Repertoire notes](repertoire.md)
-</section>
-
-<section class="quick-card" markdown>
-## Blog focus
-
-Arrangements, rehearsal notes, section features, listening recommendations, and stories from the rhythm section.
-
-[All posts](blog/index.md)
-</section>
-
+<div class="event-actions">
+  <a class="md-button md-button--primary" href="tel:063683475">Call 06 368 3475</a>
+  <a class="md-button" href="assets/levin-rsa-cabaret-2026.jpg">View the official poster</a>
 </div>
 
-## Current Set Shape
+</section>
 
-<ul class="set-list">
-  <li>Classic Basie pocket and relaxed medium swing</li>
-  <li>Latin changes for the second set lift</li>
-  <li>Ballad feature with tenor and flugelhorn colors</li>
-  <li>Finale chart with full brass shout chorus</li>
-</ul>
+<div class="event-layout" markdown>
+
+<section class="event-details" markdown>
+
+## Cabaret details
+
+<dl class="event-facts">
+  <div>
+    <dt>Where</dt>
+    <dd>Levin RSA</dd>
+  </div>
+  <div>
+    <dt>When</dt>
+    <dd>Saturday 31 October 2026 at 7:30 pm</dd>
+  </div>
+  <div>
+    <dt>Tickets</dt>
+    <dd>$10 pre-sales or door sales</dd>
+  </div>
+  <div>
+    <dt>Featuring</dt>
+    <dd>Shellie Hanley and Kirsten Clark</dd>
+  </div>
+  <div>
+    <dt>Meals</dt>
+    <dd>Available</dd>
+  </div>
+</dl>
+
+## Ticket sales
+
+Tickets are available from the Levin RSA during these office hours:
+
+- **Tuesday:** 11:30 am–1:00 pm
+- **Wednesdays and Fridays:** 3:30 pm–7:00 pm
+
+For ticket enquiries, call **[06 368 3475](tel:063683475)**.
+
+</section>
+
+<figure class="event-poster">
+  <a href="assets/levin-rsa-cabaret-2026.jpg">
+    <img src="assets/levin-rsa-cabaret-2026.jpg" alt="Official Levin RSA Cabaret poster for the MJC Big Swing Band on 31 October 2026">
+  </a>
+  <figcaption>Official event poster. Select it to view the full-size image.</figcaption>
+</figure>
+
+</div>
