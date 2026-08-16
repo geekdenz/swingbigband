@@ -22,6 +22,28 @@ AUTO_COMMIT="${AUTO_COMMIT:-false}"
 COMMIT_MESSAGE="${COMMIT_MESSAGE:-Deploy site}"
 export SITE_URL
 
+case "${1:-}" in
+  --deploy)
+    DRY_RUN=false
+    ;;
+  --dry-run)
+    DRY_RUN=true
+    ;;
+  "")
+    ;;
+  --help|-h)
+    echo "Usage: $0 [--deploy|--dry-run]"
+    echo "  --deploy   Build strictly and push the source branch to trigger GitHub Pages."
+    echo "  --dry-run  Build strictly without pushing (default follows DRY_RUN in .env)."
+    exit 0
+    ;;
+  *)
+    echo "Unknown option: $1" >&2
+    echo "Usage: $0 [--deploy|--dry-run]" >&2
+    exit 2
+    ;;
+esac
+
 MKDOCS=(python3 -m mkdocs)
 if [[ -d ".deps" ]]; then
   export PYTHONPATH=".deps${PYTHONPATH:+:$PYTHONPATH}"
@@ -33,8 +55,14 @@ if ! "${MKDOCS[@]}" --version >/dev/null 2>&1; then
   exit 1
 fi
 
+BUILD_DIR="$(mktemp -d "${TMPDIR:-/tmp}/swingbigband-deploy.XXXXXX")"
+cleanup() {
+  rm -rf -- "$BUILD_DIR"
+}
+trap cleanup EXIT
+
 echo "Building site..."
-"${MKDOCS[@]}" build --strict
+"${MKDOCS[@]}" build --strict --site-dir "$BUILD_DIR"
 
 if [[ "$DRY_RUN" == "true" ]]; then
   echo "DRY_RUN=true, so deployment was skipped."
@@ -63,6 +91,6 @@ elif ! git diff --quiet || ! git diff --cached --quiet; then
   exit 1
 fi
 
-echo "Pushing private source branch '$SOURCE_BRANCH' to '$GIT_REMOTE'..."
+echo "Pushing source branch '$SOURCE_BRANCH' to '$GIT_REMOTE'..."
 git push "$GIT_REMOTE" "$SOURCE_BRANCH"
-echo "The server publisher will build approved private main and update the public output repository."
+echo "GitHub Actions will build this commit and deploy it to GitHub Pages."

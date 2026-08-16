@@ -151,6 +151,93 @@
   text-align: center;
 }
 
+.community-links {
+  margin-top: clamp(3rem, 7vw, 5.5rem);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid color-mix(in srgb, var(--md-default-fg-color) 12%, transparent);
+  border-radius: 12px;
+  background:
+    radial-gradient(circle at 100% 0%, rgb(217 154 40 / 14%), transparent 34%),
+    color-mix(in srgb, var(--md-default-bg-color) 96%, var(--swing-navy));
+}
+
+.community-links__intro {
+  max-width: 42rem;
+}
+
+.community-links__intro h2 {
+  margin: .15rem 0 .45rem;
+}
+
+.community-links__intro p:last-child {
+  margin: 0;
+  color: var(--md-default-fg-color--light);
+}
+
+.community-links__kicker {
+  margin: 0;
+  color: var(--md-accent-fg-color);
+  font-size: .72rem;
+  font-weight: 750;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.affiliate-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .9rem;
+  margin-top: 1.5rem;
+}
+
+.affiliate-card {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  min-width: 0;
+  padding: 1.2rem;
+  color: var(--md-default-fg-color);
+  text-decoration: none;
+  border: 1px solid color-mix(in srgb, var(--md-default-fg-color) 14%, transparent);
+  border-radius: 9px;
+  background: var(--md-default-bg-color);
+  box-shadow: 0 .35rem 1rem rgb(0 0 0 / 5%);
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.affiliate-card:hover,
+.affiliate-card:focus-visible {
+  color: var(--md-default-fg-color);
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 .65rem 1.5rem rgb(0 0 0 / 12%);
+  transform: translateY(-2px);
+}
+
+.affiliate-card strong {
+  color: var(--md-default-fg-color);
+  font-size: 1.02rem;
+}
+
+.affiliate-card > span:last-child {
+  color: var(--md-default-fg-color--light);
+  font-size: .82rem;
+  line-height: 1.45;
+}
+
+.affiliate-card__type {
+  color: var(--md-accent-fg-color);
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.community-links__note {
+  margin: 1rem 0 0;
+  color: var(--md-default-fg-color--lighter);
+  font-size: .68rem;
+}
+
 @media screen and (max-width: 760px) {
   .event-hero {
     padding: 2.2rem 1.2rem;
@@ -167,7 +254,8 @@
   }
 
   .event-layout,
-  .event-facts {
+  .event-facts,
+  .affiliate-grid {
     grid-template-columns: 1fr;
   }
 

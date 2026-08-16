@@ -1,11 +1,9 @@
 # SwingBig.Band
 
-A MkDocs Material blog site for a jazz big band.
+A MkDocs Material site for the Manawatū Jazz Club Big Swing Band.
 
-This repository is the **private canonical content repository**. Markdown,
-MkDocs configuration, source assets, and history stay private. A server-side
-publisher builds it and replaces the contents of a separate public repository
-with generated HTML/assets only.
+This is the source repository for [swingbig.band](https://swingbig.band/).
+GitHub Actions validates and deploys the MkDocs site from `main` to GitHub Pages.
 
 ## Run with Docker Compose
 
@@ -21,30 +19,14 @@ To use a different host port:
 SWINGBIG_PORT=8080 docker compose -f compose.yaml up
 ```
 
-## Private validation
+## GitHub Pages deployment
 
-GitHub Actions strictly builds pushes and pull requests. It does not deploy this
-private source repository to Pages.
+The `validate.yml` workflow strictly builds pushes and pull requests. The
+`pages.yml` workflow builds and deploys every push to `main` using GitHub Pages.
 
-CMS changes are pushed to the private `cms-updates` branch. The
+CMS changes can be pushed to the `cms-updates` branch. The
 `cms-content-pr.yml` workflow opens or updates a pull request into protected
-`main`; review and validation happen before publication.
-
-## Public deployment
-
-The private CMS repository contains the production publisher. After private
-`main` is approved, the server:
-
-1. clones private `main` into a temporary directory;
-2. runs `mkdocs build --strict`;
-3. clones the public output repository;
-4. deletes its previous generated files;
-5. copies only the generated site, `.nojekyll`, and optional `CNAME`;
-6. pushes public `main` using a one-hour GitHub App installation token.
-
-Configure GitHub Pages in the public output repository to deploy branch `main`,
-folder `/ (root)`. Complete server, GitHub App, security, backup, and recovery
-instructions are in `docs/PRODUCTION_DEPLOYMENT.md` of the private CMS repository.
+`main`; review and validation happen before deployment.
 
 ## Deploy with the Script
 
@@ -52,12 +34,12 @@ instructions are in `docs/PRODUCTION_DEPLOYMENT.md` of the private CMS repositor
 cp example.env .env
 $EDITOR .env
 chmod +x scripts/deploy.sh
-./scripts/deploy.sh
+./scripts/deploy.sh --deploy
 ```
 
-This script validates and pushes private source `main`. It never writes generated
-output into this repository or directly to Pages. Keep `DRY_RUN=true` until the
-private remote and `SITE_URL` are correct.
+The script runs a strict local build and pushes `main`; the push triggers the
+GitHub Pages workflow. `--deploy` explicitly overrides the safe `DRY_RUN=true`
+default in `.env`. Run `./scripts/deploy.sh --dry-run` to build without pushing.
 
 ## Build Locally
 
