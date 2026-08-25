@@ -1,15 +1,18 @@
-site_name: MJC Big Swing Band
+site_name: Manawatu Jazz Club Big Swing Band
 site_description: Levin RSA Cabaret on Saturday 31 October 2026 at 7:30 pm.
 site_url: !ENV [SITE_URL, ""]
 
 exclude_docs: |
-  about.md
   gigs.md
   repertoire.md
   blog/
 
+not_in_nav: |
+  about.md
+
 theme:
   name: material
+  custom_dir: overrides
   logo: assets/saxophone.svg
   favicon: assets/saxophone.svg
   palette:
@@ -54,3 +57,6 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/about-directions.js

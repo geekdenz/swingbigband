@@ -238,6 +238,114 @@
   font-size: .68rem;
 }
 
+.site-secondary-link {
+  margin: 1.6rem 0 0;
+  color: var(--md-default-fg-color--light);
+  font-size: .76rem;
+  text-align: center;
+}
+
+.site-secondary-link a {
+  color: inherit;
+}
+
+.about-hero {
+  max-width: 48rem;
+  padding: clamp(2rem, 6vw, 4rem);
+  color: #fff;
+  border-radius: 12px;
+  background:
+    radial-gradient(circle at 90% 0%, rgb(246 200 95 / 23%), transparent 36%),
+    linear-gradient(145deg, #17130f 0%, var(--swing-navy) 100%);
+  box-shadow: 0 1.5rem 3rem rgb(0 0 0 / 18%);
+}
+
+.about-hero h1 {
+  margin: .25rem 0 1rem;
+  color: #fff;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  line-height: 1.02;
+  text-wrap: balance;
+}
+
+.about-hero > p:last-child {
+  max-width: 42rem;
+  margin-bottom: 0;
+  color: rgb(255 255 255 / 84%);
+  font-size: clamp(1rem, 2.2vw, 1.15rem);
+}
+
+.about-kicker,
+.location-card__label {
+  margin: 0;
+  color: var(--swing-gold-light);
+  font-size: .72rem;
+  font-weight: 750;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+  gap: clamp(1.5rem, 5vw, 3.5rem);
+  align-items: start;
+  margin-top: clamp(2rem, 5vw, 4rem);
+}
+
+.about-details h2 {
+  margin-top: 0;
+}
+
+.location-card {
+  padding: 1.4rem;
+  border: 1px solid color-mix(in srgb, var(--md-default-fg-color) 14%, transparent);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--md-default-bg-color) 94%, var(--swing-gold-light));
+}
+
+.location-card__label {
+  color: var(--md-accent-fg-color);
+}
+
+.location-card h2 {
+  margin: .15rem 0 .8rem;
+}
+
+.location-card address {
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.location-actions {
+  display: grid;
+  gap: .65rem;
+  margin-top: 1.2rem;
+}
+
+.location-actions .md-button {
+  width: 100%;
+  margin: 0;
+  font: inherit;
+  text-align: center;
+  cursor: pointer;
+}
+
+.location-status,
+.location-fallback {
+  margin: .85rem 0 0;
+  color: var(--md-default-fg-color--light);
+  font-size: .72rem;
+}
+
+.location-status:empty {
+  display: none;
+}
+
+.location-fallback {
+  text-align: center;
+}
+
 @media screen and (max-width: 760px) {
   .event-hero {
     padding: 2.2rem 1.2rem;
@@ -255,8 +363,14 @@
 
   .event-layout,
   .event-facts,
-  .affiliate-grid {
+  .affiliate-grid,
+  .about-layout {
     grid-template-columns: 1fr;
+  }
+
+  .about-hero {
+    padding: 2.2rem 1.2rem;
+    border-radius: 8px;
   }
 
   .event-poster {
