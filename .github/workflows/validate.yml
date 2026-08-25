@@ -36,4 +36,4 @@ jobs:
       - name: Build site strictly
         run: mkdocs build --strict
         env:
-          SITE_URL: ${{ vars.SITE_URL }}
+          SITE_URL: ${{ vars.SITE_URL || 'https://manawatujazzclubbigswing.band/' }}

@@ -4,7 +4,7 @@
   {{ super() }}
   {% set meta_title = page.meta.title if page.meta and page.meta.title else page.title %}
   {% set meta_description = page.meta.description if page.meta and page.meta.description else config.site_description %}
-  {% set site_root = config.site_url.rstrip('/') %}
+  {% set site_root = (config.site_url or "https://manawatujazzclubbigswing.band/").rstrip('/') %}
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="{{ config.site_name }}">
