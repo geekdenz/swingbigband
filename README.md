@@ -2,7 +2,8 @@
 
 A MkDocs Material site for the Manawatū Jazz Club Big Swing Band.
 
-This is the source repository for [swingbig.band](https://swingbig.band/).
+This is the source repository for
+[manawatujazzclubbigswing.band](https://manawatujazzclubbigswing.band/).
 GitHub Actions validates and deploys the MkDocs site from `main` to GitHub Pages.
 
 ## Run with Docker Compose

@@ -4,6 +4,7 @@
   {{ super() }}
   {% set meta_title = page.meta.title if page.meta and page.meta.title else page.title %}
   {% set meta_description = page.meta.description if page.meta and page.meta.description else config.site_description %}
+  {% set site_root = config.site_url.rstrip('/') %}
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="{{ config.site_name }}">
@@ -19,8 +20,8 @@
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "@id": "https://swingbig.band/#website",
-        "url": "https://swingbig.band/",
+        "@id": "{{ site_root }}/#website",
+        "url": "{{ site_root }}/",
         "name": "Manawatu Jazz Club Big Swing Band",
         "alternateName": "MJC Big Swing Band"
       }
@@ -34,17 +35,17 @@
         "@graph": [
           {
             "@type": "WebPage",
-            "@id": "https://swingbig.band/about/#webpage",
-            "url": "https://swingbig.band/about/",
+            "@id": "{{ site_root }}/about/#webpage",
+            "url": "{{ site_root }}/about/",
             "name": "About the band - Manawatu Jazz Club Big Swing Band",
             "description": "A jazz big swing band in Palmerston North, New Zealand, playing under the Manawatu Jazz Club and led by Trevor Castle.",
-            "mainEntity": { "@id": "https://swingbig.band/#band" }
+            "mainEntity": { "@id": "{{ site_root }}/#band" }
           },
           {
             "@type": "MusicGroup",
-            "@id": "https://swingbig.band/#band",
+            "@id": "{{ site_root }}/#band",
             "name": "Manawatu Jazz Club Big Swing Band",
-            "url": "https://swingbig.band/about/",
+            "url": "{{ site_root }}/about/",
             "description": "A jazz big swing band in Palmerston North, New Zealand, playing under the Manawatu Jazz Club and led by Trevor Castle.",
             "genre": ["Jazz", "Swing"],
             "parentOrganization": {

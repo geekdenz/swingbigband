@@ -1,6 +1,6 @@
 site_name: Manawatu Jazz Club Big Swing Band
 site_description: Levin RSA Cabaret on Saturday 31 October 2026 at 7:30 pm.
-site_url: !ENV [SITE_URL, ""]
+site_url: !ENV [SITE_URL, "https://manawatujazzclubbigswing.band/"]
 
 exclude_docs: |
   gigs.md
