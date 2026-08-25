@@ -7,9 +7,6 @@ exclude_docs: |
   repertoire.md
   blog/
 
-not_in_nav: |
-  about.md
-
 theme:
   name: material
   custom_dir: overrides
@@ -38,6 +35,7 @@ theme:
 
 nav:
   - Home: index.md
+  - About: about.md
 
 plugins:
   - search

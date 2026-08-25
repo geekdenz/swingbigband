@@ -3,7 +3,6 @@ title: About the band
 description: A jazz big swing band in Palmerston North, New Zealand, playing under the Manawatu Jazz Club and led by Trevor Castle.
 schema: music_group
 hide:
-  - navigation
   - toc
 ---
 

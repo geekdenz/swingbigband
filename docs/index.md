@@ -1,7 +1,6 @@
 ---
 title: Levin RSA Cabaret
 hide:
-  - navigation
   - toc
 ---
 
