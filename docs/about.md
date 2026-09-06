@@ -22,7 +22,7 @@ The band is a jazz big swing band in Palmerston North, in the Manawatu, New Zeal
 
 ## The players
 
-The line-up includes trumpet, saxophone, trombone, clarinet, drums, guitar, bass, and piano/keyboard players.
+The line-up includes trumpet, saxophone, trombone, clarinet, drums, guitar, bass, and piano/keyboard players. We're always [looking for new players](join.md) to join the band.
 
 </section>
 

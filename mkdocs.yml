@@ -36,6 +36,7 @@ theme:
 nav:
   - Home: index.md
   - About: about.md
+  - Join the band: join.md
 
 plugins:
   - search

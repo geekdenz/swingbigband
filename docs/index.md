@@ -85,4 +85,4 @@ For ticket enquiries, call **[06 368 3475](tel:063683475)**.
 
 </section>
 
-<p class="site-secondary-link"><a href="about/">About the band</a></p>
+<p class="site-secondary-link"><a href="about/">About the band</a> · <a href="join/">Join the band</a></p>
