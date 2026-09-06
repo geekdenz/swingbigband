@@ -39,7 +39,7 @@ Message the band on Facebook or get in touch through the Manawatu Jazz Club, and
   <p>Reach out and we'll point you to the next rehearsal.</p>
 
   <div class="location-actions">
-    <a class="md-button md-button--primary" href="https://www.facebook.com/MJCBigBand" target="_blank" rel="noopener">Message on Facebook</a>
+    <a class="md-button md-button--primary" href="https://m.me/MJCBigBand" target="_blank" rel="noopener">Message on Facebook</a>
     <a class="md-button" href="https://www.mjc.org.nz/" target="_blank" rel="noopener">Manawatu Jazz Club</a>
   </div>
 </aside>
