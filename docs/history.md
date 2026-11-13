@@ -47,8 +47,8 @@ A look back at recent Manawatu Jazz Club Big Swing Band performances.
 </section>
 
 <figure class="event-poster">
-  <a href="assets/levin-rsa-cabaret-2026.jpg">
-    <img src="assets/levin-rsa-cabaret-2026.jpg" alt="Official Levin RSA Cabaret poster for the MJC Big Swing Band on 31 October 2026">
+  <a href="../assets/levin-rsa-cabaret-2026.jpg">
+    <img src="../assets/levin-rsa-cabaret-2026.jpg" alt="Official Levin RSA Cabaret poster for the MJC Big Swing Band on 31 October 2026">
   </a>
   <figcaption>Official event poster. Select it to view the full-size image.</figcaption>
 </figure>
