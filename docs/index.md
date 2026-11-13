@@ -1,21 +1,22 @@
 ---
-title: Levin RSA Cabaret
+title: Christmas Party
+description: Christmas Party at the Willow Park Tavern on Sunday 13 December 2026 at 5 pm.
 hide:
   - toc
 ---
 
 <section class="event-hero" markdown>
 
-<p class="event-kicker">Levin RSA Cabaret</p>
+<p class="event-kicker">Christmas Party</p>
 
 # Manawatu Jazz Club Big Swing Band
 
-<p class="event-date"><time datetime="2026-10-31T19:30">7:30 pm · Saturday 31 October 2026</time></p>
+<p class="event-date"><time datetime="2026-12-13T17:00">5:00 pm · Sunday 13 December 2026</time></p>
 
 <p class="event-credit">Musical Director <strong>Trevor Castle</strong></p>
 
 <div class="event-actions">
-  <a class="md-button" href="assets/levin-rsa-cabaret-2026.jpg">View the official poster</a>
+  <a class="md-button" href="assets/willow-park-christmas-party-2026.jpg">View the official poster</a>
 </div>
 
 </section>
@@ -24,45 +25,34 @@ hide:
 
 <section class="event-details" markdown>
 
-## Cabaret details
+## Party details
 
 <dl class="event-facts">
   <div>
     <dt>Where</dt>
-    <dd>Levin RSA</dd>
+    <dd>Willow Park Tavern, Palmerston North</dd>
   </div>
   <div>
     <dt>When</dt>
-    <dd>Saturday 31 October 2026 at 7:30 pm</dd>
+    <dd>Sunday 13 December 2026 at 5:00 pm</dd>
   </div>
   <div>
-    <dt>Tickets</dt>
-    <dd>$10 pre-sales or door sales</dd>
+    <dt>Door sales</dt>
+    <dd>Adults $20 · Members $10 · Students $5</dd>
   </div>
   <div>
-    <dt>Featuring</dt>
-    <dd>Shellie Hanley and Kirsten Clark</dd>
-  </div>
-  <div>
-    <dt>Meals</dt>
-    <dd>Available</dd>
+    <dt>High school students</dt>
+    <dd>Free</dd>
   </div>
 </dl>
 
-## Ticket sales
-
-Tickets are available from the Levin RSA during these office hours:
-
-- **Tuesday:** 11:30 am–1:00 pm
-- **Wednesdays and Fridays:** 3:30 pm–7:00 pm
-
-For ticket enquiries, call **[06 368 3475](tel:063683475)**.
+Join us for a toe-tapping evening full of holiday cheer, with music and songs from the MJC Big Swing Band led by Trevor Castle.
 
 </section>
 
 <figure class="event-poster">
-  <a href="assets/levin-rsa-cabaret-2026.jpg">
-    <img src="assets/levin-rsa-cabaret-2026.jpg" alt="Official Levin RSA Cabaret poster for the MJC Big Swing Band on 31 October 2026">
+  <a href="assets/willow-park-christmas-party-2026.jpg">
+    <img src="assets/willow-park-christmas-party-2026.jpg" alt="Official Christmas Party poster for the MJC Big Swing Band at Willow Park Tavern on 13 December 2026">
   </a>
   <figcaption>Official event poster. Select it to view the full-size image.</figcaption>
 </figure>
@@ -85,4 +75,4 @@ For ticket enquiries, call **[06 368 3475](tel:063683475)**.
 
 </section>
 
-<p class="site-secondary-link"><a href="about/">About the band</a> · <a href="join/">Join the band</a></p>
+<p class="site-secondary-link"><a href="about/">About the band</a> · <a href="join/">Join the band</a> · <a href="history/">Past gigs</a></p>
